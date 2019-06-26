@@ -22,4 +22,7 @@ brew install python3
 brew install wget
 brew install git
 
+grep -q -f $(which zsh) /etc/shells || echo $(which zsh) | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+
 wget -O "/Users/$USER/Downloads/pock.zip" "https://pock.dev/download.php?file=pock_0_5_1_lack.zip"
