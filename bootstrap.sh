@@ -21,6 +21,7 @@ fi
 brew install antibody
 brew install git
 brew install python3
+brew install terraform-docs
 brew install terminal-notifier
 brew install tree
 brew install wget
