@@ -1,4 +1,5 @@
 path=('/Users/bshah/Library/Python/3.7/bin' $path)
+path=('/usr/local/opt/ruby/bin' $path)
 
 # Enable autocompletions
 autoload -Uz compinit
@@ -63,10 +64,14 @@ SPACESHIP_PROMPT_ORDER=(
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
+  venv          # virtualenv section
+  pyenv         # Pyenv section
 )
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_VENV_SHOW=true
+
 
 antibody bundle denysdovhan/spaceship-prompt
 
