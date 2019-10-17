@@ -34,9 +34,6 @@ brew install yarn
 grep -q -f $(which zsh) /etc/shells || echo $(which zsh) | sudo tee -a /etc/shells
 chsh -s $(which zsh)
 
-# For Macbooks with Touchbar
-wget -O "/Users/$USER/Downloads/pock.zip" "https://pock.dev/download.php?file=pock_0_5_1_lack.zip"
-
 # awscli
 pip3 install --user awscli
 
