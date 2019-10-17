@@ -26,6 +26,10 @@ brew install terminal-notifier
 brew install tree
 brew install wget
 brew install zsh
+brew install jq
+brew install ruby
+brew install terraform_landscape
+brew install yarn
 
 grep -q -f $(which zsh) /etc/shells || echo $(which zsh) | sudo tee -a /etc/shells
 chsh -s $(which zsh)
