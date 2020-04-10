@@ -30,20 +30,22 @@ brew install jq
 brew install ruby
 brew install terraform_landscape
 brew install yarn
+brew install awk
+brew install aws-okta
+brew install gitlab-runner
+brew install helm@2
+brew install htop
+brew install kubernetes-cli
+brew install neofetch
+brew install pre-commit
+brew install vault
+brew install tflint
 
 grep -q -f $(which zsh) /etc/shells || echo $(which zsh) | sudo tee -a /etc/shells
 chsh -s $(which zsh)
 
-# For Macbooks with Touchbar
-wget -O "/Users/$USER/Downloads/pock.zip" "https://pock.dev/download.php?file=pock_0_5_1_lack.zip"
-
 # awscli
 pip3 install --user awscli
-
-# kubectl
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
 
 # terraform
 curl -LO https://releases.hashicorp.com/terraform/"$TF_VERSION"/"$TF_ZIP"
