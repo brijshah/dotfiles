@@ -1,7 +1,7 @@
 [init]
 	templateDir = /Users/bshah/.git-template
 [user]
-	email = brijshah0@gmail.com
+	email = {email}
 	name = brijshah
 [pager]
 	branch = false
