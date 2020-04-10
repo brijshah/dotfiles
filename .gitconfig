@@ -1,0 +1,13 @@
+[init]
+	templateDir = /Users/bshah/.git-template
+[user]
+	email = brijshah0@gmail.com
+	name = brijshah
+[pager]
+	branch = false
+[push]
+  default = current
+[branch]
+  autosetuprebase = always
+[protocol]
+	version = 2
