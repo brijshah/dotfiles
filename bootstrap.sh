@@ -19,27 +19,27 @@ if test ! $(which brew); then
 fi
 
 brew install antibody
-brew install git
-brew install python3
-brew install terraform-docs
-brew install terminal-notifier
-brew install tree
-brew install wget
-brew install zsh
-brew install jq
-brew install ruby
-brew install terraform_landscape
-brew install yarn
 brew install awk
 brew install aws-okta
+brew install git
 brew install gitlab-runner
 brew install helm@2
 brew install htop
+brew install jq
 brew install kubernetes-cli
 brew install neofetch
 brew install pre-commit
-brew install vault
+brew install python3
+brew install ruby
+brew install terminal-notifier
+brew install terraform_landscape
+brew install terraform-docs
 brew install tflint
+brew install tree
+brew install vault
+brew install wget
+brew install yarn
+brew install zsh
 
 grep -q -f $(which zsh) /etc/shells || echo $(which zsh) | sudo tee -a /etc/shells
 chsh -s $(which zsh)
