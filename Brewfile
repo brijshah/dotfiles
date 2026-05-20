@@ -1,0 +1,6 @@
+brew "antidote"
+brew "jq"
+brew "starship"
+brew "uv"
+brew "wget"
+vscode "github.copilot-chat"
