@@ -1,6 +1,7 @@
 brew "antidote"
 brew "jq"
 brew "spaceship"
+brew "starship"
 brew "uv"
 brew "wget"
 cask "font-victor-mono-nerd-font"
