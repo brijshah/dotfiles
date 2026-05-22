@@ -1,1 +1,13 @@
+# Completion bootstrap
+mattmc3/ez-compinit
+zsh-users/zsh-completions kind:fpath path:src
+
+# Tab completion UI
+Aloxaf/fzf-tab
+
+# Editing/history UX
 zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+
+# Highlighting last among ZLE/widget plugins
+zdharma-continuum/fast-syntax-highlighting kind:defer
