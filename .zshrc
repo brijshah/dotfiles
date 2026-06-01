@@ -46,8 +46,17 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
+# directory jumping
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
+# searchable shell history
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
 # prompt
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
-
