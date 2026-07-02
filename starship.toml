@@ -1,6 +1,5 @@
 "$schema" = "https://starship.rs/config-schema.json"
 scan_timeout = 100
-command_timeout = 500
 follow_symlinks = false
 add_newline = false
 palette = "custom"
@@ -11,7 +10,6 @@ ${custom.giturl}\
 $git_branch\
 ${custom.git_worktree}\
 $git_status\
-$line_break\
 $character\
 """
 right_format = """$all"""
@@ -31,22 +29,13 @@ truncation_length = 4
 
 [username]
 disabled = true
-show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
-format = " $user "
-
-[line_break]
-disabled = true
 
 [character]
-disabled = false
 success_symbol = "[ ](bold fg:green)"
 error_symbol = "[✘ ](bold fg:red)"
 vimcmd_symbol = "[: ](bold fg:yellow)"
 
 [package]
-disabled = false
 symbol = ""
 
 [time]
@@ -66,10 +55,9 @@ case "$GIT_REMOTE" in
   *)          echo " " ;;
 esac
 """
-when = "git rev-parse --is-inside-work-tree 2> /dev/null"
+when = true
 format = "$output"
 require_repo = true
-ignore_timeout = true
 
 [git_branch]
 symbol = "[](surface0) "
@@ -103,11 +91,10 @@ description = "Show indicator when inside a git worktree"
 command = """
 [ "$(git rev-parse --git-common-dir)" != "$(git rev-parse --git-dir)" ] && echo "⛓ "
 """
-when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+when = true
 format = " ([$output ]($style))"
 style = "bold green"
 require_repo = true
-ignore_timeout = true
 
 [nodejs]
 symbol = "󰎙"
@@ -141,8 +128,7 @@ detect_files = ["go.mod"]
 style = "sky"
 
 [php]
-symbol = ""
-format = "[ $symbol( $version) ]($style)"
+disabled = true
 
 [java]
 symbol = " "
@@ -150,12 +136,10 @@ format = "[ $symbol( $version) ]($style)"
 style = "maroon"
 
 [kotlin]
-symbol = ""
-format = "[ $symbol( $version) ]($style)"
+disabled = true
 
 [haskell]
-symbol = ""
-format = "[ $symbol( $version) ]($style)"
+disabled = true
 
 [python]
 symbol = ""
@@ -171,7 +155,7 @@ style = "sapphire"
 # --- background ---
 crust = "#11111b"
 mantle = "#181825"
-base = "#1e1e2e"   # git branch bg
+base = "#1e1e2e"
 
 overlay2 = "#9399b2"
 overlay1 = "#7f849c"
@@ -200,4 +184,4 @@ teal = "#94e2d5"
 sky = "#89dceb"
 sapphire = "#74c7ec"
 blue = "#89b4fa"
-lavender = "#b4befe"  # git branch fg
+lavender = "#b4befe"

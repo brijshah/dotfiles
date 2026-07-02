@@ -1,12 +1,18 @@
 # Typography
-font-size = 11.5
+font-size = 11
 font-thicken = true
+font-family = VictorMono Nerd Font Mono
 
 # Theme
-theme = "Catppuccin Frappe"
+theme = "Catppuccin Mocha"
 
 # Window and Appearance
 background-opacity = 0.9
+background-blur = true
+window-title-font-family = VictorMono NFM Italic
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
 
 # Cursor
 cursor-style = bar
@@ -19,3 +25,13 @@ copy-on-select = clipboard
 
 # Performance
 scrollback-limit = 25000000
+
+# MacOS
+macos-titlebar-style = tabs
+
+# Shell
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+
+# Admin
+auto-update = download
+auto-update-channel = stable
